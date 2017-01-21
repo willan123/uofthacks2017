@@ -1,0 +1,23 @@
+<%= render partial: 'layouts/navbar' %>
+
+<h1>TeaMZ</h1>
+
+<h3>Team: <%= @team_name %></h3>
+
+<% @leaders.each_with_index do |u, i| %>
+	<h4><%= i+1 %> |
+		<%= if u.name != ""
+				u.name
+			else
+				"Unkown Name"
+			end %> |
+		<%= u.score %></h4>
+<% end %>
+
+<br>
+<br>
+<br>
+
+<h3>Current Challenges:</h3>
+<p>Most steps - Week</p>
+<p>Best sleep - Month</p>

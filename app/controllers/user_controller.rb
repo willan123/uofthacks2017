@@ -12,4 +12,15 @@ class UserController < ApplicationController
     @enjoyment = @today_record.pluck(:enjoyment).first
     @achievement = @today_record.pluck(:achievement).first
   end
+
+  def team
+    @team = Team.where(:id => current_user.team).first
+
+    @team_name = @team.name
+
+    @leaders = User.where(:team_id => current_user.team).order("score DESC").first(3)
+  end
+
+  def challenges
+  end
 end

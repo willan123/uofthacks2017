@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :records
+  belongs_to :team
 
   def admin?
     self.role_id == 0 # Admin if id==0
