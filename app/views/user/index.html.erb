@@ -1,0 +1,14 @@
+<%= render partial: 'layouts/navbar' %>
+
+<h1><%= @user %></h1>
+
+<% if @today_record.first !=nil %>
+	<br>
+	<h3>Steps taken: <%= @steps %></h3>
+	<h3>Hours slept: <%= @sleep %></h3>
+	<h3>Meditated?: <%= @meditated %></h3>
+	<h3>Enjoyment?: <%= @enjoyment %></h3>
+	<h3>Achievement: <%= @achievement %></h3>
+<% else %>
+	<h3>No activity record for today</h3>
+<% end %>

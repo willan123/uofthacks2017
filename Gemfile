@@ -31,6 +31,11 @@ gem 'puma'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
+# Users and authentication
+gem 'devise'
+gem 'rails_admin'
+gem 'cancancan'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

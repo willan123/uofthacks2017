@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  steps: 1
+  meditation: false
+  sleep: 1
+  date: 2017-01-21
+  achievement: false
+  enjoyment: false
+
+two:
+  steps: 1
+  meditation: false
+  sleep: 1
+  date: 2017-01-21
+  achievement: false
+  enjoyment: false
