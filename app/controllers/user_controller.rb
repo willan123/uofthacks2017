@@ -23,4 +23,8 @@ class UserController < ApplicationController
 
   def challenges
   end
+
+  def history
+    @history = Record.where(:user_id => current_user.id).order("date DESC")
+  end
 end

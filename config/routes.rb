@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/dashboard' => 'user#index'
   get '/team' => 'user#team'
   get '/challenges' => 'user#challenges'
+  get '/history' => 'user#history'
 
 
   root 'pages#index'
