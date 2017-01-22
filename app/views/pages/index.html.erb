@@ -1,4 +1,11 @@
-<%= render partial: 'layouts/navbar' %>
 
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div id="homescreen">
+	<div id="login">
+		<%= image_tag('logo.png') %>
+		<h1>Harbour</h1>
+
+		<%= link_to(image_tag('harbour_button.png', border:0), new_user_session_path, html_options = { :id => 'sign_in_button' } ) %>
+
+		<h4>Sign up</h4>
+	</div>
+</div>

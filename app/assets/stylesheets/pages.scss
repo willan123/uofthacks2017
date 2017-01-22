@@ -1,3 +1,58 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#homescreen {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	
+	background: linear-gradient(217deg, #2c3e50, #15e1e8, #24beff, #e47d24);
+	background-size: 1200% 1200%;
+
+	-webkit-animation: AnimationName 30s ease infinite;
+	-moz-animation: AnimationName 30s ease infinite;
+	animation: AnimationName 30s ease infinite;
+	@-webkit-keyframes AnimationName {
+		0%{background-position:79% 0%}
+		50%{background-position:22% 100%}
+		100%{background-position:79% 0%}
+	}
+	@-moz-keyframes AnimationName {
+		0%{background-position:79% 0%}
+		50%{background-position:22% 100%}
+		100%{background-position:79% 0%}
+	}
+	@keyframes AnimationName { 
+		0%{background-position:79% 0%}
+		50%{background-position:22% 100%}
+		100%{background-position:79% 0%}
+	}
+
+	#login {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		text-align: center;
+
+		img {
+			width: 150px;
+		}
+
+		h1 {
+			margin-top: 10px;
+			margin-bottom: 60px;
+			font-size: 4em;
+		}
+
+		#sign_in_button {
+			img {
+				width: 120px;
+			}
+		}
+	}
+}
