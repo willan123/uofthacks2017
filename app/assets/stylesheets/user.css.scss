@@ -1,0 +1,203 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body {
+	overflow-x: hidden;
+}
+
+.bot-bar {
+	position: fixed !important;
+	width: 100% !important;
+	bottom: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.navbar-nav {
+	width: 100% !important;
+	bottom: 0 !important;
+	margin-bottom: 0 !important;
+	background: #2c3e50 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	li {
+		float: none;
+		text-align: center;
+		display: inline-block !important;
+		width: 32%;
+	}
+}
+
+.footer-nav-images {
+	img {
+		width: 55px !important;
+	}
+}
+
+
+// Dashboard
+#dash-header {
+	background: #e88325;
+	background: -moz-linear-gradient(top,  #e88325 50%, #e89b54 50%);
+	background: -webkit-linear-gradient(top,  #e88325 50%,#e89b54 50%);
+	background: linear-gradient(to bottom,  #e88325 50%,#e89b54 50%);
+
+	color: white;
+	text-align: center;
+
+	h2 {
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
+
+	#history {
+		width: 55px;
+		margin-top: -40px;
+		margin-right: 30px;
+	}
+	#streak {
+		width: 55px;
+		margin-top: -40px;
+		margin-left: 30px;
+	}
+	#dashboard-face {
+		width: 120px;
+		margin-bottom: 15px;
+	}
+}
+
+.dash-row {
+	margin-top: 25px;
+	text-align: center;
+}
+.dash-row-lower {
+	margin-top: 15px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+#steps, #sleep, #meditation, #recreation {
+	display: inline-block;
+	width: 42%;
+	text-align: center;
+
+	img {
+		float: left;
+		width: 70%;
+		margin-left: 15%;
+		display: block;
+	}
+
+	h4 {
+		width: 100%;
+		float: left;
+		display: block;
+	}
+}
+
+// Team page
+.team-container {
+	margin-bottom: 100px;
+}
+
+#team-header {
+	background: #15E1E8;
+
+	color: white;
+	text-align: center;
+}
+
+#team-logo {
+	width: 100px;
+	margin: 10px 0;
+}
+
+.darker-row {
+	background: #e6e6e6;
+}
+
+#challenges-title {
+	margin-bottom: 20px;
+}
+
+.leader-row {
+	text-align: center;
+
+	#team_name {
+		margin-top: 0;
+		padding: 10px 0;
+		font-family: "Helvetica";
+		width: 100%;
+		color: white;
+		background: #76E5E8;
+	}
+
+	#leaderboard-title, #challenges-title {
+		padding: 5px 0;
+	}
+
+	.leader {
+		text-align: left;
+		margin: 0;
+		padding: 5px 15px;
+
+		h2, h3 {
+			margin: 10px 5px;
+		}
+
+		.leader_photo {
+			width: 50px;
+			margin-left: 15px;
+		}
+	}
+
+	.leaderboard-position {
+		//float: left;
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.leaderboard-user, .leaderboard-score {
+		display: inline-block;
+	}
+	.leaderboard-score {
+		float: right;
+		margin-top: 15px !important;
+		margin-left: 15px;
+	}
+}
+
+
+.challenge-row {
+	text-align: center;
+	margin-top: 20px;
+
+	.challenge {
+		text-align: left;
+		margin: 0;
+
+		.challenge-left {
+			display: inline-block;
+			width: 60%;
+			padding-left: 20px;
+			margin-top: 5px;
+		}
+	   	.challenge-right {
+			display: inline-block;
+			width: 35%;
+			padding-left: 15px;
+			margin-top: 5px;
+		}
+		.challenge-header {
+			text-align: center;
+			margin-left: -20px;
+			font-family: "Helvetica";
+		}
+		.ending-header {
+			text-align: center;
+			margin-left: 20px;
+			font-family: "Helvetica";
+		}
+	}
+}

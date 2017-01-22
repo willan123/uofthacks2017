@@ -1,0 +1,14 @@
+<%= render partial: 'layouts/navbar' %>
+
+<h1>History</h1>
+
+<h3>Msytryyyyy</h3>
+
+<% @history.each do |h| %>
+	<h4><%= h.date.strftime("%b %d, %Y") %> |
+		Steps: <%= h.steps %> |
+		Sleep: <%= h.sleep %> |
+		Meditation: <%= h.meditation %> |
+		Recreation: <%= h.enjoyment %>
+	</h4>
+<% end %>
