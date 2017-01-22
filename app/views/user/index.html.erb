@@ -1,14 +1,34 @@
 <%= render partial: 'layouts/navbar' %>
 
-<h1><%= @user %></h1>
+<div class="container">
+	<div id="dash-header" class="row">
+		<h2><%= @user %></h2>
 
-<% if @today_record.first !=nil %>
-	<br>
-	<h3>Steps taken: <%= @steps %></h3>
-	<h3>Hours slept: <%= @sleep %></h3>
-	<h3>Meditated?: <%= @meditated %></h3>
-	<h3>Enjoyment?: <%= @enjoyment %></h3>
-	<h3>Achievement: <%= @achievement %></h3>
-<% else %>
-	<h3>No activity record for today</h3>
-<% end %>
+		<div class="row">
+			<%= image_tag('history_icon.png', :id => "history") %>
+			<%= image_tag('dashboard_face.png', :id => "dashboard-face") %>
+			<%= image_tag('streak_icon.png', :id => "streak") %>
+		</div>
+	</div>
+	<div class="row dash-row">
+		<div id="steps">
+			<%= image_tag('steps_icon.png') %>
+			<h4>9000 / 10000<br/>Steps</h4>
+		</div>
+		<div id="sleep">
+			<%= image_tag('sleep_complete_icon.png') %>
+			<h4>7.3 / 7 hours<br/>Sleep</h4>
+		</div>
+	</div>
+	<div class="row dash-row-lower">
+		<div id="meditation">
+			<%= image_tag('meditation_complete_icon.png') %>
+			<h4>10 / 10 mins<br/>Meditation</h4>
+		</div>
+		<div id="recreation">
+			<%= image_tag('recreation_icon.png') %>
+			<h4>0 / 30 mins<br/>Recreation</h4>
+		</div>
+	</div>
+</div>
+
