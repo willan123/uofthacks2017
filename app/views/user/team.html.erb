@@ -1,23 +1,52 @@
 <%= render partial: 'layouts/navbar' %>
+<div class="container team-container">
+	<div id="team-header" class="row">
+		<div class="row">
+			<%= image_tag('team_logo.png', :id => "team-logo") %>
+		</div>
+	</div>
+	<div class="row leader-row">
+		<h1 id="team_name"><%= @team_name%></h1>
+		<h2 id="leaderboard-title">Leaderboard</h2>
+		<% @leaders.each_with_index do |u, i| %>
+		<% if i%2 == 1 %>
+			<div class="row leader darker-row">
+		<% else %>
+			<div class="row leader">
+		<% end %>
+			<h2 class="leaderboard-position"><%= i+1 %></h2>
+			<%= image_tag('dashboard_face.png', :class => "leader_photo") %>
 
-<h1>TeaMZ</h1>
+			<h3 class="leaderboard-user">
+				<%= if u.name != ""
+						u.name
+					else
+						"Unkown Name"
+					end %>
+			</h3>
+			<h3 class="leaderboard-score"><%= u.score %> pts</h3>
+			<br/>
+		</div>
+		<% end %>
+	</div>
 
-<h3>Team: <%= @team_name %></h3>
+	<hr/>
 
-<% @leaders.each_with_index do |u, i| %>
-	<h4><%= i+1 %> |
-		<%= if u.name != ""
-				u.name
-			else
-				"Unkown Name"
-			end %> |
-		<%= u.score %></h4>
-<% end %>
+	<div class="row challenge-row">
+		<h2 id="challenges-title">Current Challenges</h2>
+		<div class="row challenge darker-row">
+			<h3 class="challenge-left challenge-header">Challenge</h3>
+			<h3 class="challenge-right ending-header">Ending</h3>
+		</div>
+		<div class="row challenge">
+			<h3 class="challenge-left">Most steps</h3>
+			<h3 class="challenge-right">Jan 29, 2017</h3>
+		</div>
+		<div class="row challenge darker-row">
+			<h3 class="challenge-left">Best sleep</h3>
+			<h3 class="challenge-right">Feb 28, 2017</h3>
+		</div>
+	</div>
+</div>
 
-<br>
-<br>
-<br>
 
-<h3>Current Challenges:</h3>
-<p>Most steps - Week</p>
-<p>Best sleep - Month</p>
