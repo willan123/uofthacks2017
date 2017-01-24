@@ -17252,3 +17252,1947 @@ Processing by UserController#index as HTML
 Completed 200 OK in 198ms (Views: 162.7ms | ActiveRecord: 22.3ms)
 
 
+Started GET "/dashboard" for ::1 at 2017-01-22 04:38:40 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (23.6ms)
+  Rendered user/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 6852ms (Views: 6805.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/pages.self-9d4d8a852eaba0f81fcd2f53875535758fefabc8191b2839e242cb00c7681cac.css?body=1" for ::1 at 2017-01-22 04:38:47 -0500
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 04:38:50 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cXfYeru5c1PIQyb4iwA36LI+hR61pti4mUNuvvvXR/AvOdLv7vroyXK3wSiz4wJBJJXNIAjAi0h9Nl71ZekM3g=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 04:38:50 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 162ms (Views: 157.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 04:38:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 188ms (Views: 175.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 04:38:58 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jPfc3f4TMJurne83Q2xw1S2crt4hAyuYg5IKefj90cwcOH8YhW/dZ9GbIBKMPDZAJArcbu99gvNe685DhnhdKg==", "user"=>{"email"=>"willan@mac.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "willan@mac.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-22 09:38:59 UTC], ["last_sign_in_at", 2017-01-22 09:29:18 UTC], ["sign_in_count", 19], ["updated_at", 2017-01-22 09:38:59 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 214ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 04:38:59 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.9ms)
+  Rendered user/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 105ms (Views: 93.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 04:39:01 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (6.5ms)
+  Rendered user/team.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 140ms (Views: 124.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 04:39:03 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (7.5ms)
+  Rendered user/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 151ms (Views: 121.1ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 04:39:03 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (5.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.8ms)
+  Rendered user/team.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 139ms (Views: 121.3ms | ActiveRecord: 7.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 04:39:05 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YEqTWPgzd0DtpNVQD/vyfKY+V4e7VEUuI3mbZPoN63siS3jAIOFn1j83b5F7VOY9bFHF06LomwFEkni/WMxJzg=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 04:39:05 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 118ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/willan123/Documents/hackathons/uofthacks/config/environment.rb:5)
+Started GET "/users/sign_in" for ::1 at 2017-01-22 10:43:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1139.9ms)
+Completed 200 OK in 1327ms (Views: 1261.7ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 10:44:04 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HDQvqX4kK/bm8Z+aZIdqfLeNJjKX1mRyC06EDxMEf+LDDlHfOUoiMFGQdo4eU2sqSMX0SvjfLbnQJ4MMNCAmfA==", "user"=>{"email"=>"willan@mac.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "willan@mac.com"], ["LIMIT", 1]]
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-22 15:44:04 UTC], ["last_sign_in_at", 2017-01-22 09:38:59 UTC], ["sign_in_count", 20], ["updated_at", 2017-01-22 15:44:04 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 242ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 10:44:04 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UserController> at /Users/willan123/Documents/hackathons/uofthacks/app/controllers/user_controller.rb:2)
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.3ms)
+  Rendered user/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 152ms (Views: 132.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 10:44:16 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.9ms)
+  Rendered user/team.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 215ms (Views: 100.6ms | ActiveRecord: 55.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 10:44:18 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (13.6ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (5.8ms)
+  Rendered user/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 177ms (Views: 147.9ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 10:44:21 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (8.7ms)
+  Rendered user/team.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 179ms (Views: 158.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 52.90.146.42 at 2017-01-22 10:45:05 -0500
+Processing by PagesController#index as */*
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 127ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 138.51.250.203 at 2017-01-22 10:45:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (748.6ms)
+Completed 200 OK in 925ms (Views: 901.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-9d4d8a852eaba0f81fcd2f53875535758fefabc8191b2839e242cb00c7681cac.css?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/user.self-862cfd2ab82146641ccf12cc98c14a61c003810841cfdb5bd459ee85af4f3f85.css?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/application.self-41110f8855316ae3fa384461444ea9cd410a9fc1d86415ac9cc4ebf60478b113.css?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:12 -0500
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/logo-ce1733b0829e86e3b4c349848ed1cbd769b58bd5f72d498c40b0967205089c95.png" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started GET "/assets/harbour_button-8f67a7ff03b7993e4ca34c2db1b09d02f5df621ce75a66e1a101de2ee3c47cfc.png" for 138.51.250.203 at 2017-01-22 10:45:13 -0500
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 10:45:31 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4L1Qmmu6/X9pVaepeL4LaboqiJGfACWYnLywDH4RvU9QpjX9S3VvNttQQJwWUQJZdqVMKpTq0EMzKKpcSQDAVQ=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 10:45:31 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 127ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 10:45:32 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 170ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 10:45:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dc3VWU8LSc6faq9jKC7qZsgcQ3y8ZqRLU6xtLbojcka5I3GytFGW0mILqi6l99VGDKx8hDVV9tyhqV/R8iuiVg==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-01-22 15:45:42 UTC], ["sign_in_count", 3], ["updated_at", 2017-01-22 15:45:42 UTC], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 180ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 10:45:42 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (5.3ms)
+  Rendered user/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 123ms (Views: 111.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 10:45:45 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (6.2ms)
+  Rendered user/team.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 199ms (Views: 173.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2017-01-22 10:46:22 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (2.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (3.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (12.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (7.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (3.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (2.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY teams.id desc[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_select.html.haml (25.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" ORDER BY records.id desc[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (84.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_submit_buttons.html.haml (4.8ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (357.4ms)
+Completed 200 OK in 648ms (Views: 380.4ms | ActiveRecord: 8.7ms)
+
+
+Started PUT "/admin/user/2/edit" for ::1 at 2017-01-22 10:46:38 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CYtWg4TzG+O6BwztG0Sr2yS7TOChJcHuskzttBWim5f7AI6kwkK0bJczJHEv19Hpp0cmHg9P7nSFOVoBF6TJ6Q==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"0", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"3", "current_sign_in_at"=>"January 22, 2017 15:45", "last_sign_in_at"=>"January 21, 2017 19:10", "current_sign_in_ip"=>"::1", "last_sign_in_ip"=>"::1", "name"=>"Marium K.", "team_id"=>"2", "score"=>"15000", "record_ids"=>["", ""]}, "return_to"=>"http://localhost:3000/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE 1=0[0m
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "reset_password_sent_at" = $2, "current_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["encrypted_password", "$2a$11$5BpGi769G2rS3xz0sBr90u6wUP78V5KJ6m.jnHdJskICzuSgS8I2q"], ["reset_password_sent_at", nil], ["current_sign_in_at", 2017-01-22 15:45:00 UTC], ["updated_at", 2017-01-22 15:46:38 UTC], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 181ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/admin/user" for ::1 at 2017-01-22 10:46:38 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 10:46:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2017-01-22 10:46:44 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 10:46:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.6ms)
+Started GET "/admin" for ::1 at 2017-01-22 10:46:44 -0500
+Completed 200 OK in 160ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 10:46:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 167ms (Views: 129.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/users/sign_in" for 138.51.250.203 at 2017-01-22 10:46:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 119ms (Views: 117.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 138.51.250.203 at 2017-01-22 10:46:53 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"clHEi2bTbfEylHaEm+5UZ4IA7QX8bJkyYtPfsNMBDNS4w9lJKCROPLtuubtU0HqJciLKX1yuehYw81M0chJnvQ==", "user"=>{"email"=>"willan@mac.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "willan@mac.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["current_sign_in_at", 2017-01-22 15:46:54 UTC], ["last_sign_in_at", 2017-01-22 15:44:04 UTC], ["current_sign_in_ip", "138.51.250.203/32"], ["sign_in_count", 21], ["updated_at", 2017-01-22 15:46:54 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://53be442a.ngrok.io/dashboard
+Completed 302 Found in 183ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/dashboard" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (6.9ms)
+  Rendered user/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 125ms (Views: 113.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/logout_icon-e12b204b70e2f1b7c6670a3432ed5557006daf3c81098b9e3fcf6727b271ccd4.png" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Started GET "/assets/dashboard_icon-4e5f316c31d0cfebeb2eefacf7579241ef96253b61456cf8fdbfe49bbe573bc4.png" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Started GET "/assets/team_icon-796980cae9cd29791a676bb5570109e341efdadfa6565fb854f802fb60acba2c.png" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Started GET "/assets/dashboard_face-b936d1a6cdfe037e3fd579c3e57116f0f8b21c244113b6efba38b22e1c009b5a.png" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Started GET "/assets/history_icon-33a77f1a6cdb346e90194e25d766d320e3abc0d3109d455a413329d75d9f8957.png" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Started GET "/assets/streak_icon-0295062bacf95ab0ab2f881bf901bfb77eb09d1d2c4f4d0513c5074b7eb89d00.png" for 138.51.250.203 at 2017-01-22 10:46:54 -0500
+Started GET "/assets/steps_icon-dc91bf3bd4378cfb0fa773f10dc53fecc534042cf4f80e52c923a3c5ab221a53.png" for 138.51.250.203 at 2017-01-22 10:46:55 -0500
+Started GET "/assets/sleep_complete_icon-109dcfc073ee25ceaa90466cc0fbd66207af3e4f3a9e21ee4e7bd3ed8bc9eab2.png" for 138.51.250.203 at 2017-01-22 10:46:55 -0500
+Started GET "/assets/recreation_icon-ae3dc5365738168032492ef07c97aa81cf29f5f522d520fdae45b363a02366cf.png" for 138.51.250.203 at 2017-01-22 10:46:55 -0500
+Started GET "/assets/meditation_complete_icon-fb091011646e59544dad99e872e716f0ff03ed3f26cbe85c9e6f68fef09154fd.png" for 138.51.250.203 at 2017-01-22 10:46:56 -0500
+Started GET "/admin" for 138.51.250.203 at 2017-01-22 10:46:58 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT  "records".* FROM "records" ORDER BY "records"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (33.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (16.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.3ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (4.8ms)
+Completed 200 OK in 798ms (Views: 416.0ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.self-88b674769e8261580c8d0171f0a6f26c577db5b3f0520fd5dc68baf30cbafa2c.css?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery.iframe-transport.self-b58640d2146e10a028d4aec4f1c6e624305f8b5edd02cbb5ca77f7fb56b4d976.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery.remotipart.self-1660679e325ee534ce863e680eb6ad0bc9739d262594dc1337a2171e5c19c939.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/rails_admin/moment-with-locales.self-c29e385ac561ac8d380cf9a68428251c3dd6b6f0f05f6114c6ae7e8114678db8.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/rails_admin/bootstrap-datetimepicker.self-9bf8b50ba86095fb5caaadd1ee11eaf661b3f4879f3ea5263d541e9804fd7b15.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/rails_admin/ra.filter-box.self-195103c2264434612da85f150286ad7ea0d279828a186070ba5db6506cd7b5e6.js?body=1" for 138.51.250.203 at 2017-01-22 10:46:59 -0500
+Started GET "/assets/rails_admin/ra.filtering-multiselect.self-bed24122f49a15537a73b85a4ada928d417938a0711400d96bb55e5edf6b40c6.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/ra.filtering-select.self-2e2b4b93869c61371d6deca3fb34c933848aa9dfc2562dfaae5fd0fcc77b72b0.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/ra.remote-form.self-6ee31242b35c47eae247621696152697683860be737fcb9fc7705305736c9370.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/jquery.pjax.self-aa02343d5b755c77fd76db8b2d2864cf2aebdba056b56e74b3b91f2e65207444.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/jquery_nested_form.self-d38045d10ebdd28aac44152cb451796232091957b86b47bedad1ab171a3a12cd.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/ra.nested-form-hooks.self-53f400a47e3ece2d820f34e4a9834b229c191801c55619003453eb45c864db04.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/ra.i18n.self-725ab24c454e18d4832f68df96ec4fffa6190faed5636160923a6d1162a1a0ba.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.self-2621ced336904d375bef144d46edd9d304889e09c6559d64df325bbd10f4ce8a.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/bootstrap/bootstrap.self-94f59a48294d99f8d9b7632cd5a1742670c7735fe37ec7c555aab939b635fdde.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:00 -0500
+Started GET "/assets/rails_admin/ra.widgets.self-674fe3caebbb13c96450d27b42528399cd7617aeebd3642d34656519e812ea21.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:01 -0500
+Started GET "/assets/rails_admin/ui.self-5f1671365225e7918e5bf4cb99fc38b189e81884fb859682f79a683f41ee19b7.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:01 -0500
+Started GET "/assets/rails_admin/custom/ui.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:01 -0500
+Started GET "/assets/rails_admin/rails_admin.self-ab9f3e5c71b96d0ca434851ecacc97b0fc3a0e8d96ab171916e9d5fdd10ef15b.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:01 -0500
+Started GET "/assets/rails_admin/jquery.colorpicker.self-65a540a6a8e61569a39a37bd1456543ae5e5bbe48868247372bed40a1dff2bcf.js?body=1" for 138.51.250.203 at 2017-01-22 10:47:01 -0500
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 138.51.250.203 at 2017-01-22 10:47:02 -0500
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 138.51.250.203 at 2017-01-22 10:47:05 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 2[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (77.0ms)
+Completed 200 OK in 111ms (Views: 98.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D" for 138.51.250.203 at 2017-01-22 10:47:08 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (1.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (1.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (7.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (1.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY teams.id desc[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_select.html.haml (14.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" ORDER BY records.id desc[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (17.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_submit_buttons.html.haml (7.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (154.6ms)
+Completed 200 OK in 191ms (Views: 172.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/rails_admin/multiselect/icon_sprite-34a30806fcba43a2effc9739cb7a370a865199a7d38bfcbc7c2474ef3ff70ded.png" for 138.51.250.203 at 2017-01-22 10:47:09 -0500
+Started PUT "/admin/user/2/edit" for 138.51.250.203 at 2017-01-22 10:47:16 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XWXcPbnPwIINNgjncBPik0U2o/UhX+O58xUfK6jQGCSg2v0a12OlGRw0WlDd39wcReVa+tBe/WVa/7OdNZWcLQ==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"0", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"3", "current_sign_in_at"=>"January 22, 2017 15:45", "last_sign_in_at"=>"January 21, 2017 19:10", "current_sign_in_ip"=>"::1", "last_sign_in_ip"=>"::1", "name"=>"Marium K.", "team_id"=>"2", "score"=>"15000", "record_ids"=>["", ""]}, "return_to"=>"http://53be442a.ngrok.io/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecord Load (2.8ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE 1=0[0m
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["encrypted_password", "$2a$11$.QMpyyO8NXoLssJVQKOnvelKvbLlxD1QW9R5l/l379wc5w6gSpiKy"], ["updated_at", 2017-01-22 15:47:16 UTC], ["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://53be442a.ngrok.io/admin/user
+Completed 302 Found in 170ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/admin/user" for 138.51.250.203 at 2017-01-22 10:47:16 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (84.7ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (18.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.9ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (16.4ms)
+Completed 200 OK in 385ms (Views: 372.5ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 10:47:23 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Rj9o79KIaFLb2z+08PLLOzC5HYboUPlhyQHnR4tlEti0tLDIlDnH3fbvFyjEYbEJs0V3eEY61vv+dFDyiWNApg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 10:47:23 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 170ms (Views: 166.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 10:47:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 120ms (Views: 118.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 10:47:39 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IiqroMV9lIxYKMR7GRjSIjH/9GTG9K+INRv09DOze77QoXOHg8w7A3Uc7Octi6gQsgOemmiegBICbkNBMbUpwA==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-22 15:47:39 UTC], ["last_sign_in_at", 2017-01-22 15:45:00 UTC], ["sign_in_count", 4], ["updated_at", 2017-01-22 15:47:39 UTC], ["id", 2]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 181ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 10:47:39 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.5ms)
+  Rendered user/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 131ms (Views: 117.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 10:47:51 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (7.5ms)
+  Rendered user/team.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 172ms (Views: 155.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 10:49:22 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UserController> at /Users/willan123/Documents/hackathons/uofthacks/app/controllers/user_controller.rb:2)
+Processing by UserController#team as HTML
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (15.7ms)
+  Rendered user/team.html.erb within layouts/application (64.5ms)
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 11.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Fixnum into String):
+    15: 			<div class="row leader">
+    16: 		<% end %>
+    17: 			<h2 class="leaderboard-position"><%= i+1 %></h2>
+    18: 			<%= image_tag('dashboard_face' + i + '.png', :class => "leader_photo") %>
+    19: 
+    20: 			<h3 class="leaderboard-user">
+    21: 				<%= if u.name != ""
+  
+app/views/user/team.html.erb:18:in `+'
+app/views/user/team.html.erb:18:in `block in _app_views_user_team_html_erb__2650734682578896289_70306549450840'
+app/views/user/team.html.erb:11:in `each'
+app/views/user/team.html.erb:11:in `each_with_index'
+app/views/user/team.html.erb:11:in `_app_views_user_team_html_erb__2650734682578896289_70306549450840'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (112.4ms)
+Started GET "/team" for ::1 at 2017-01-22 10:49:29 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (5.2ms)
+  Rendered user/team.html.erb within layouts/application (6687.1ms)
+Completed 200 OK in 6858ms (Views: 6840.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/dashboard_face0-b936d1a6cdfe037e3fd579c3e57116f0f8b21c244113b6efba38b22e1c009b5a.png" for ::1 at 2017-01-22 10:49:36 -0500
+Started GET "/images/dashboard_face2.png" for ::1 at 2017-01-22 10:49:36 -0500
+Started GET "/images/dashboard_face1.png" for ::1 at 2017-01-22 10:49:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face2.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face1.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (10.8ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (2.7ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (70.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (593.6ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (7.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.4ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.8ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (752.5ms)
+Started GET "/team" for ::1 at 2017-01-22 10:50:21 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (5.2ms)
+  Rendered user/team.html.erb within layouts/application (6373.6ms)
+Completed 200 OK in 6822ms (Views: 6807.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/dashboard_face1-f2ca688dc011e3169361cb1729a19c910876d2e49d4b9b7d6670e315e60c16f9.png" for ::1 at 2017-01-22 10:50:28 -0500
+Started GET "/images/dashboard_face2.png" for ::1 at 2017-01-22 10:50:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face2.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (11.5ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (4.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (398.5ms)
+Started POST "/users/sign_in" for ::1 at 2017-01-22 10:50:33 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JKiVZ4rB+xJB/oZHFI73cmaQRbG2ppYFeIEpm+RAXuTWI01AzHBUnWzKrtsgHY1A5WwvTxjMuZ9P9J4u5kYMmg==", "user"=>{"email"=>"willan@mac.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 10:50:33 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (6.9ms)
+  Rendered user/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 143ms (Views: 128.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 10:50:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (12.0ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (136.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (717.3ms)
+Started GET "/dashboard" for ::1 at 2017-01-22 10:50:46 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.3ms)
+  Rendered user/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 119ms (Views: 107.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 10:50:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (99.0ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (2.8ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (438.4ms)
+Started GET "/admin" for ::1 at 2017-01-22 10:50:50 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (21.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mRecord Load (1.2ms)[0m  [1m[34mSELECT  "records".* FROM "records" ORDER BY "records"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  [1m[36mTeam Load (8.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+Started GET "/admin" for ::1 at 2017-01-22 10:50:50 -0500
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (69.4ms)
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT  "records".* FROM "records" ORDER BY "records"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (161.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (19.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.2ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (8.1ms)
+Completed 200 OK in 868ms (Views: 803.6ms | ActiveRecord: 42.3ms)
+
+
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (12.7ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.9ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (5.2ms)
+Completed 200 OK in 821ms (Views: 750.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2017-01-22 10:50:54 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 2[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (238.3ms)
+Completed 200 OK in 330ms (Views: 275.4ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/admin/user/1/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2017-01-22 10:50:56 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (3.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (2.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (1.8ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (2.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY teams.id desc[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_select.html.haml (24.8ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" ORDER BY records.id desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (17.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_submit_buttons.html.haml (5.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (214.3ms)
+Completed 200 OK in 279ms (Views: 247.3ms | ActiveRecord: 18.1ms)
+
+
+Started PUT "/admin/user/1/edit" for ::1 at 2017-01-22 10:51:10 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9b+VDE7kWB5gUz9TJ/blt2j1ckKw9ZO40xAIlzD4BRGs2HUidEWSdw4R32UlX/fKW6kfCjQ8UZ0IFIbqhNXRJQ==", "user"=>{"email"=>"willan@mac.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"0", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"21", "current_sign_in_at"=>"January 22, 2017 15:46", "last_sign_in_at"=>"January 22, 2017 15:44", "current_sign_in_ip"=>"138.51.250.203", "last_sign_in_ip"=>"::1", "name"=>"Susan R.", "team_id"=>"2", "score"=>"10000", "record_ids"=>["", "", "1"]}, "return_to"=>"http://localhost:3000/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecord Load (4.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."id" = 1[0m
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["name", "Susan R."], ["current_sign_in_at", 2017-01-22 15:46:00 UTC], ["last_sign_in_at", 2017-01-22 15:44:00 UTC], ["updated_at", 2017-01-22 15:51:10 UTC], ["id", 1]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 45ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/user" for ::1 at 2017-01-22 10:51:10 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (89.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (15.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.1ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (10.5ms)
+Completed 200 OK in 292ms (Views: 283.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/user/4/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2017-01-22 10:51:15 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (16.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (7.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (2.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_datetime.html.haml (1.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY teams.id desc[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_select.html.haml (18.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" ORDER BY records.id desc[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (16.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_submit_buttons.html.haml (8.7ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (334.4ms)
+Completed 200 OK in 380ms (Views: 360.5ms | ActiveRecord: 3.7ms)
+
+
+Started PUT "/admin/user/4/edit" for ::1 at 2017-01-22 10:51:23 -0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UkItKg2P/io+wYatCCyxH5sZiZHPGd+21eTyVgsq8r8LJc0ENy40Q1CDZpsKhaNiqEXk2UvQHZMO4Hwrvwcmiw==", "user"=>{"email"=>"helen.su@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"1", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"1", "current_sign_in_at"=>"January 21, 2017 21:50", "last_sign_in_at"=>"January 21, 2017 16:49", "current_sign_in_ip"=>"::1", "last_sign_in_ip"=>"::1", "name"=>"Kevin M.", "team_id"=>"2", "score"=>"1200", "record_ids"=>["", ""]}, "return_to"=>"http://localhost:3000/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE 1=0[0m
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "Kevin M."], ["updated_at", 2017-01-22 15:51:23 UTC], ["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 34ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/admin/user" for ::1 at 2017-01-22 10:51:23 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 2[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (63.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (16.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.6ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (10.8ms)
+Completed 200 OK in 322ms (Views: 310.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 10:52:13 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (22.7ms)
+  Rendered user/team.html.erb within layouts/application (7264.9ms)
+Completed 200 OK in 7489ms (Views: 7438.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/dashboard_face2-828b5834f8bea1d723a6fa03b2ff7506700f8616d9986831b3987fbbacbe0a37.png" for ::1 at 2017-01-22 10:52:21 -0500
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 10:52:29 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5CFq1nkNmi9E8QIRh+uDxHGcPuw3KYd6xLnXk+97n6O9Ror4Q6xQRiqz4ieFQpG5QsBTpLPgRV8fvVnuW1ZLlw=="}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 10:52:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 92ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 52.90.146.42 at 2017-01-22 10:56:46 -0500
+Processing by PagesController#index as */*
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 358ms (Views: 315.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 11:02:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 476ms (Views: 456.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 11:03:02 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F3CGkFkYv1dLP5LiizVxBTtfKmlveN/PVM4Z/DfIxj3ddcAlCqQGffkKlXeNZXnBI/C9uJTQocrFpUdfzIQVLA==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-22 16:03:02 UTC], ["last_sign_in_at", 2017-01-22 15:47:39 UTC], ["sign_in_count", 5], ["updated_at", 2017-01-22 16:03:02 UTC], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 214ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 11:03:02 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (7.6ms)
+  Rendered user/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 150ms (Views: 137.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:03:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (24.7ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (7.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (571.0ms)
+Started GET "/team" for ::1 at 2017-01-22 11:03:24 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (17.8ms)
+  Rendered user/team.html.erb within layouts/application (463.3ms)
+Completed 200 OK in 678ms (Views: 615.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:03:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (10.7ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (4.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (337.2ms)
+Started GET "/dashboard" for ::1 at 2017-01-22 11:03:37 -0500
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:03:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendered layouts/_navbar.html.erb (52.1ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (13.2ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (8.6ms)
+  Rendered user/index.html.erb within layouts/application (238.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (299.8ms)
+Completed 200 OK in 589ms (Views: 572.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:03:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (14.6ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (7.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (290.8ms)
+Started GET "/team" for ::1 at 2017-01-22 11:03:45 -0500
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:03:45 -0500
+Processing by UserController#team as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  [1m[36mUser Load (101.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (5.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  [1m[36mTeam Load (47.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (7.0ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (5.6ms)
+  Rendering user/team.html.erb within layouts/application
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered layouts/_navbar.html.erb (7.0ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (249.2ms)
+  Rendered user/team.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 498ms (Views: 244.4ms | ActiveRecord: 160.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 11:06:38 -0500
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:06:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Processing by UserController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (49.1ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering user/index.html.erb within layouts/application
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (6.8ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (2.6ms)
+  Rendered layouts/_navbar.html.erb (115.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (195.1ms)
+  Rendered user/index.html.erb within layouts/application (167.1ms)
+Completed 200 OK in 411ms (Views: 339.3ms | ActiveRecord: 55.1ms)
+
+
+Started GET "/images/dashboard_face.png" for ::1 at 2017-01-22 11:06:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard_face.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (5.7ms)
+  Rendered collection of /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (3.1ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (156.5ms)
+Started GET "/dashboard" for ::1 at 2017-01-22 11:07:09 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (16.9ms)
+  Rendered user/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 235ms (Views: 199.7ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 11:07:34 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zsobu/Yn9fpkg9Y5fKTHG40oKQfjnciJv1k1inUxYvvN0e/ZTbH9tArt1q4oaz43snKYtw2Hy31W3WfLGdsC+Q=="}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 11:07:34 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 145ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 138.51.248.249 at 2017-01-22 11:26:45 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 380ms (Views: 370.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-9d4d8a852eaba0f81fcd2f53875535758fefabc8191b2839e242cb00c7681cac.css?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/user.self-862cfd2ab82146641ccf12cc98c14a61c003810841cfdb5bd459ee85af4f3f85.css?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/application.self-41110f8855316ae3fa384461444ea9cd410a9fc1d86415ac9cc4ebf60478b113.css?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:46 -0500
+Started GET "/" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 227ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-41110f8855316ae3fa384461444ea9cd410a9fc1d86415ac9cc4ebf60478b113.css?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:52 -0500
+Started GET "/assets/logo-ce1733b0829e86e3b4c349848ed1cbd769b58bd5f72d498c40b0967205089c95.png" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/assets/harbour_button-8f67a7ff03b7993e4ca34c2db1b09d02f5df621ce75a66e1a101de2ee3c47cfc.png" for 138.51.248.249 at 2017-01-22 11:26:53 -0500
+Started GET "/users/sign_in" for 138.51.248.249 at 2017-01-22 11:26:57 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 150ms (Views: 144.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 138.51.248.249 at 2017-01-22 11:27:37 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KoqLO/EjZ+7Nrw3cwy6hOY20bF6fbJ16opNoI/QkHpnpHpzfonDVK7FF3KgydO/zg5l2XO0x8lC4/qYvfFkdZw==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["current_sign_in_at", 2017-01-22 16:27:37 UTC], ["last_sign_in_at", 2017-01-22 16:03:02 UTC], ["current_sign_in_ip", "138.51.248.249/32"], ["sign_in_count", 6], ["updated_at", 2017-01-22 16:27:37 UTC], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://53be442a.ngrok.io/dashboard
+Completed 302 Found in 186ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/dashboard" for 138.51.248.249 at 2017-01-22 11:27:37 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (8.7ms)
+  Rendered user/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 136ms (Views: 121.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/logout_icon-e12b204b70e2f1b7c6670a3432ed5557006daf3c81098b9e3fcf6727b271ccd4.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/dashboard_face0-b936d1a6cdfe037e3fd579c3e57116f0f8b21c244113b6efba38b22e1c009b5a.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/dashboard_icon-4e5f316c31d0cfebeb2eefacf7579241ef96253b61456cf8fdbfe49bbe573bc4.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/team_icon-796980cae9cd29791a676bb5570109e341efdadfa6565fb854f802fb60acba2c.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/history_icon-33a77f1a6cdb346e90194e25d766d320e3abc0d3109d455a413329d75d9f8957.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/streak_icon-0295062bacf95ab0ab2f881bf901bfb77eb09d1d2c4f4d0513c5074b7eb89d00.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/steps_icon-dc91bf3bd4378cfb0fa773f10dc53fecc534042cf4f80e52c923a3c5ab221a53.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/meditation_complete_icon-fb091011646e59544dad99e872e716f0ff03ed3f26cbe85c9e6f68fef09154fd.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/sleep_complete_icon-109dcfc073ee25ceaa90466cc0fbd66207af3e4f3a9e21ee4e7bd3ed8bc9eab2.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/assets/recreation_icon-ae3dc5365738168032492ef07c97aa81cf29f5f522d520fdae45b363a02366cf.png" for 138.51.248.249 at 2017-01-22 11:27:38 -0500
+Started GET "/dashboard" for 138.51.248.249 at 2017-01-22 11:28:02 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.7ms)
+  Rendered user/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 118ms (Views: 107.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/pages.self-9d4d8a852eaba0f81fcd2f53875535758fefabc8191b2839e242cb00c7681cac.css?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/user.self-862cfd2ab82146641ccf12cc98c14a61c003810841cfdb5bd459ee85af4f3f85.css?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/application.self-41110f8855316ae3fa384461444ea9cd410a9fc1d86415ac9cc4ebf60478b113.css?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/logout_icon-e12b204b70e2f1b7c6670a3432ed5557006daf3c81098b9e3fcf6727b271ccd4.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/dashboard_icon-4e5f316c31d0cfebeb2eefacf7579241ef96253b61456cf8fdbfe49bbe573bc4.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/team_icon-796980cae9cd29791a676bb5570109e341efdadfa6565fb854f802fb60acba2c.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/steps_icon-dc91bf3bd4378cfb0fa773f10dc53fecc534042cf4f80e52c923a3c5ab221a53.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/meditation_complete_icon-fb091011646e59544dad99e872e716f0ff03ed3f26cbe85c9e6f68fef09154fd.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/history_icon-33a77f1a6cdb346e90194e25d766d320e3abc0d3109d455a413329d75d9f8957.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/recreation_icon-ae3dc5365738168032492ef07c97aa81cf29f5f522d520fdae45b363a02366cf.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/streak_icon-0295062bacf95ab0ab2f881bf901bfb77eb09d1d2c4f4d0513c5074b7eb89d00.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/dashboard_face0-b936d1a6cdfe037e3fd579c3e57116f0f8b21c244113b6efba38b22e1c009b5a.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/assets/sleep_complete_icon-109dcfc073ee25ceaa90466cc0fbd66207af3e4f3a9e21ee4e7bd3ed8bc9eab2.png" for 138.51.248.249 at 2017-01-22 11:28:03 -0500
+Started GET "/team" for 138.51.248.249 at 2017-01-22 11:28:45 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (5.0ms)
+  Rendered user/team.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 138ms (Views: 123.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/team_logo-38098646122375c6f9341dfc0cfc1a3f398b724b9b13863ac14ccaae63c668cc.png" for 138.51.248.249 at 2017-01-22 11:28:48 -0500
+Started GET "/assets/dashboard_face1-f2ca688dc011e3169361cb1729a19c910876d2e49d4b9b7d6670e315e60c16f9.png" for 138.51.248.249 at 2017-01-22 11:28:48 -0500
+Started GET "/assets/dashboard_face2-828b5834f8bea1d723a6fa03b2ff7506700f8616d9986831b3987fbbacbe0a37.png" for 138.51.248.249 at 2017-01-22 11:28:48 -0500
+Started GET "/team" for 138.51.248.249 at 2017-01-22 11:28:48 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (3.8ms)
+  Rendered user/team.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 125ms (Views: 108.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/team" for 138.51.248.249 at 2017-01-22 11:28:52 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (4.5ms)
+  Rendered user/team.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 145ms (Views: 133.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/dashboard" for 138.51.248.249 at 2017-01-22 11:29:03 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (5.4ms)
+  Rendered user/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 122ms (Views: 110.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/dashboard" for 138.51.248.249 at 2017-01-22 11:29:05 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered user/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 80ms (Views: 72.5ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/sign_out" for 138.51.248.249 at 2017-01-22 11:29:07 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t6i3b2PMi+aNeZsssUa1ouv19219czFdCTJjwRWtU+g/WADFa85+d1WefJlI6C1888R6dSUPQdh87bkrNZiOmA=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://53be442a.ngrok.io/
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 138.51.248.249 at 2017-01-22 11:29:07 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 11:48:56 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 236ms (Views: 204.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 11:49:09 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YQVl1uxHViL1eWVKg9ZNa10lhz7PizxCRuasCqa/x4L4CwGruQhwGUq728B5hgxYXkujXQ+B0M0TU606fO1k/A==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", 2017-01-22 16:49:09 UTC], ["last_sign_in_at", 2017-01-22 16:27:37 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "138.51.248.249/32"], ["sign_in_count", 7], ["updated_at", 2017-01-22 16:49:09 UTC], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 206ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 11:49:09 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (7.0ms)
+  Rendered user/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 165ms (Views: 152.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 11:49:23 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (31.8ms)
+  Rendered user/team.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 216ms (Views: 167.0ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 11:49:40 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (76.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (11.0ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (11.0ms)
+  Rendered user/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 389ms (Views: 285.9ms | ActiveRecord: 91.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 11:54:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cfrr+ooB9XJYMdG1xHmrziMJ55CcLGpSyq8oDAzgB0d72F1ETkzxNKiOh9PVp4EZn6Txexx5439a77Co27TEzA=="}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 133ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 11:54:20 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (743.5ms)
+Completed 200 OK in 895ms (Views: 889.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 12:11:36 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 276ms (Views: 236.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 12:11:45 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TuICW9PnNDrUWSc/hwP3GJ7vp16VK+xg+1F0xwDhv9YlEwWwWaFIoducVcxlEuGHgs8bQpQ7xyrm87NfV2qJBw==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "last_sign_in_ip" = $3, "sign_in_count" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["current_sign_in_at", 2017-01-22 17:11:45 UTC], ["last_sign_in_at", 2017-01-22 16:49:09 UTC], ["last_sign_in_ip", "::1/128"], ["sign_in_count", 8], ["updated_at", 2017-01-22 17:11:45 UTC], ["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 235ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 12:11:45 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UserController> at /Users/willan123/Documents/hackathons/uofthacks/app/controllers/user_controller.rb:2)
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (7.4ms)
+  Rendered user/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 188ms (Views: 164.1ms | ActiveRecord: 7.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 12:24:02 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BDjMcRNYSj0p0cfLVMiPuqewYGdPQXFvEFsEkA+XVfYZg4Ioshr+Rfo4Qx4+A7i43zetwuwEQ4oAGYZrQ5p8gQ=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 12:24:02 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 136ms (Views: 129.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 12:59:31 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 630ms (Views: 595.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 12:59:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KkfGgV+sKfN3KyQUDYXgBNrEgMM2GP3BAH660Eycmw/tH6pxWMBfohMiBgjavWYJXxEKu6BG+iXHy6x4WfoLdA==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-22 17:59:41 UTC], ["last_sign_in_at", 2017-01-22 17:11:45 UTC], ["sign_in_count", 9], ["updated_at", 2017-01-22 17:59:41 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 198ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 12:59:41 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (9.8ms)
+  Rendered user/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 179ms (Views: 164.2ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-01-22 13:00:01 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XFuCnPIUfUb9DzYhKJCSZxIFn7AFhy2iv+QRA7h8Uhd3uWC66zX1Z2M7LSoljb1qtAOQMnFdamTrAR6czUVDJg=="}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2017-01-22 13:00:01 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 165ms (Views: 161.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-01-22 13:04:29 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 213ms (Views: 205.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 13:04:40 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/j3g3G5qBXgElmZKQ/JII8eQJR6Y4CFbd0/MYFBmXtIWx6wkZDAg8y8An3FvmF5CLwSMhoy116ORlYBES+FV0Q==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 150ms (ActiveRecord: 4.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/j3g3G5qBXgElmZKQ/JII8eQJR6Y4CFbd0/MYFBmXtIWx6wkZDAg8y8An3FvmF5CLwSMhoy116ORlYBES+FV0Q==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 280ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-01-22 13:04:45 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZId5O1h7b3DbUzg7/8k7j30sZ5YXLwZuPyZwFZplL3haFEc5zvINuj7tdvDlTKP1WAYBkwJSuFeJtXkTe6fvg==", "user"=>{"email"=>"kirmani.marium@gmail.com", "password"=>"[FILTERED]"}, "commit.x"=>"0", "commit.y"=>"0"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kirmani.marium@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-22 18:04:45 UTC], ["last_sign_in_at", 2017-01-22 17:59:41 UTC], ["sign_in_count", 10], ["updated_at", 2017-01-22 18:04:45 UTC], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 179ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 13:04:45 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (6.6ms)
+  Rendered user/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 149ms (Views: 134.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/team" for ::1 at 2017-01-22 13:05:58 -0500
+Processing by UserController#team as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (7.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = 2 ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."team_id" = 2 ORDER BY score DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendering user/team.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (7.4ms)
+  Rendered user/team.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 145ms (Views: 113.1ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-01-22 13:06:35 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (32.7ms)[0m  [1m[34mSELECT "records"."steps" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."sleep" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."meditation" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."enjoyment" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "records"."achievement" FROM "records" WHERE "records"."user_id" = $1[0m  [["user_id", 2]]
+  Rendering user/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (17.2ms)
+  Rendered user/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 235ms (Views: 177.6ms | ActiveRecord: 43.9ms)
+
+
+Started GET "/" for 138.51.250.203 at 2017-01-22 13:18:55 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 248ms (Views: 238.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/user" for ::1 at 2017-01-22 13:19:04 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (166.6ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.9ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (14.3ms)
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.9ms)
+  Rendering /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/willan123/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (11.7ms)
+Completed 200 OK in 1103ms (Views: 842.8ms | ActiveRecord: 19.6ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/willan123/Documents/hackathons/uofthacks/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/willan123/Documents/hackathons/uofthacks/config/environment.rb:5)

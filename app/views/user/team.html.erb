@@ -15,7 +15,7 @@
 			<div class="row leader">
 		<% end %>
 			<h2 class="leaderboard-position"><%= i+1 %></h2>
-			<%= image_tag('dashboard_face.png', :class => "leader_photo") %>
+			<%= image_tag('dashboard_face' + i.to_s + '.png', :class => "leader_photo") %>
 
 			<h3 class="leaderboard-user">
 				<%= if u.name != ""
